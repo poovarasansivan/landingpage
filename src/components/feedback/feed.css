@@ -1,0 +1,21 @@
+.review-icon {
+    position: fixed;
+    right: 20px; /* Changed from left to right */
+    bottom: 100px;
+    background-color: #ff477e;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000; /* Adjust as necessary */
+  }
+  
+  /* .review-icon-svg {
+    width: 31px;
+    height: 30px;
+    color:white;
+  } */
+  
+  .review-icon:hover {
+    background-color: #ff477e;
+  }
+  

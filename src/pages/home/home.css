@@ -1,0 +1,687 @@
+/* General Styles */
+.home {
+  position: relative; /* Ensure the home component acts as a relative positioning context */
+}
+
+.carousel {
+  position: relative;
+  height: 500px; /* Adjust height as needed */
+  max-width: 100%;
+  overflow: hidden;
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-icon:hover {
+  background-color: #1ebc5a;
+}
+
+.display-card {
+  position: absolute; /* Position the display-card container at the bottom of the carousel */
+  bottom: -30%; /* Align to the bottom */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  /* Ensure cards overlay the carousel */
+}
+
+.card {
+  width: 300px; /* Adjust card width */
+  margin: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* White background */
+  position: relative;
+  z-index: 2; /* Ensure cards are above carousel */
+}
+
+.about-section {
+  margin-top: 100px;
+  width: auto;
+  color: #49516f;
+  display: flex;
+  flex-direction: row;
+  padding: 120px;
+  position: relative; /* Required for positioning the images */
+}
+
+.about-left {
+  width: 50%;
+  margin-left: 50px;
+  position: relative;
+  align-items: center;
+}
+
+.about-left img {
+  position: relative;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  opacity: 0;
+  /* Remove animation from here, as it will be applied dynamically */
+}
+
+.about-left img:nth-child(1) {
+  animation-delay: 0.5s; /* Delay for the first image */
+  left: -100%; /* Start position off-screen to the left */
+}
+
+.about-left img:nth-child(2) {
+  animation-delay: 1s; /* Delay for the second image */
+  right: -100%; /* Start position off-screen to the right */
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    left: 0;
+    right: 0;
+  }
+}
+
+.about-right {
+  width: 50%;
+  opacity: 0;
+  transform: translateY(20px);
+  /* Remove animation from here, as it will be applied dynamically */
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aboutpara {
+  display: flex;
+  justify-content: start;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ff477e;
+  font-weight: bold;
+}
+
+.about-head-p {
+  text-align: justify;
+
+  display: flex;
+  justify-content: start;
+  text-align: justify;
+  font-size: 30px;
+}
+
+.about-para {
+  display: flex;
+  justify-content: start;
+  text-align: justify;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.about-experience-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  background: #f8f7f7;
+  padding: 10px;
+  margin-right: 20px;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-experience-card img {
+  width: 70%; /* Adjust as needed */
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.about-experience-card h2 {
+  font-size: 24px;
+  color: #ff477e;
+  margin: 10px 0px;
+}
+
+.about-experience-card p {
+  font-size: 18px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.about-detail-points {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.about-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.about-detail p {
+  margin-left: 10px;
+}
+
+.about-button {
+  display: flex;
+  background-color: #ff477e;
+  color: white;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+  justify-items: start;
+}
+.about-button:hover {
+  background-color: #ff1c5e;
+}
+
+.service-head-p {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #49516f;
+}
+
+.service-card {
+  background-color: #ed0368;
+  padding: 8px;
+}
+
+.services-head {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ff477e;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  align-items: center;
+  gap: 55px;
+  justify-content: center;
+}
+
+.our-packages {
+  background-color: #f8f7f7;
+  margin-top: 100px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.packages-head {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ff477e;
+}
+.packages-subhead {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #49516f;
+}
+.packages-des {
+  color: #49516f;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+
+.column1 {
+  animation-name: slide-in-left;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.column2 {
+  animation-name: slide-in-bottom;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.column3 {
+  animation-name: slide-in-right;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.packages-card {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.recent-works {
+  margin-top: 80px;
+}
+.projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  align-items: center;
+  gap: 55px;
+  justify-content: center;
+}
+.recent-work-head {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ff477e;
+}
+.recent-work-subhead {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #49516f;
+}
+.client-review-head {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ff477e;
+}
+.client-review-subhead {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #49516f;
+}
+.client-review-description {
+  color: #49516f;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+.client-reviews {
+  margin-top: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-items: start;
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 50px;
+}
+.right-side {
+  width: 50%;
+}
+
+.previous-section {
+  margin-top: 100px;
+  background-image: url(../../assets/wedding/w5.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.count-number1 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.text-prev-cont {
+  margin-top: 6px;
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+}
+
+.previous-section-text {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgba(54, 54, 54, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.previous-section-head {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+.previous-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.previous-content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 100px;
+}
+.previous-content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 100px;
+}
+.faq {
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-items: start;
+}
+.faq-head {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #ff477e;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .carousel {
+    height: 400px; /* Adjust height for tablets */
+  }
+
+  .card {
+    width: 280px; /* Adjust card width for tablets */
+    margin: 15px; /* Adjust margin for tablets */
+  }
+
+  .about-section {
+    padding: 80px; /* Adjust padding for tablets */
+  }
+
+  .about-left {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .about-left img {
+    width: 90%; /* Adjust as needed */
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .about-details {
+    flex-direction: column;
+  }
+
+  .about-experience-card,
+  .about-detail-points {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .services,
+  .projects {
+    grid-template-columns: auto;
+  }
+  .packages-card {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  .previous-section {
+    margin-top: 100px;
+    background-image: url(../../assets/wedding/w5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 300px; /* Adjust height for mobile */
+  }
+
+  .display-card {
+    position: relative; /* Reset position for mobile */
+    margin-top: 20px; /* Add space above cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 250px; /* Adjust card width for mobile */
+    margin: 10px; /* Adjust margin for mobile */
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 40px; /* Adjust padding for mobile */
+  }
+
+  .about-left {
+    margin-left: 0;
+  }
+
+  .about-left img {
+    width: 100%; /* Adjust as needed */
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .about-details {
+    flex-direction: column;
+  }
+
+  .about-experience-card,
+  .about-detail-points {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .services {
+    grid-template-columns: auto;
+  }
+  .packages-card {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  .projects {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  .previous-section {
+    margin-top: 100px;
+    background-image: url(../../assets/wedding/w5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .previous-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-content: center;
+  }
+  .previous-content1 {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  .carousel {
+    height: 280px; /* Adjust height for small mobile screens */
+  }
+
+  .card {
+    width: 250px; /* Adjust card width for small mobile screens */
+    margin: 5px; /* Adjust margin for small mobile screens */
+  }
+  .about-head-p{
+    font-size: 18px;
+    text-align: justify;
+  }
+  .about-section {
+    padding: 20px; /* Adjust padding for small mobile screens */
+  }
+  .about-detail{
+    margin: 0 2px;
+  }
+  .about-left img {
+    width: 100%; /* Adjust as needed */
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .about-details {
+    flex-direction: column;
+  }
+
+  .about-experience-card,
+  .about-detail-points {
+    width: 95%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .services {
+    grid-template-columns: auto;
+  }
+  .service-head-p {
+    font-size: 16px;
+  }
+  .packages-card {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  .projects {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  .faq-head{
+    font-size: 19px;
+  }
+  .faq-para{
+    font-size: 20px;
+  }
+  .previous-section {
+    margin-top: 100px;
+    background-image: url(../../assets/wedding/w5.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .previous-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+  }
+  .previous-content1 {
+    margin-bottom: 10px;
+  }
+}

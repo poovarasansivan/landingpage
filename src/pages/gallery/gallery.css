@@ -1,0 +1,126 @@
+.about-us {
+  background-image: url(../../assets/about.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-us-text {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgba(54, 54, 54, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-head {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.about-route {
+  background-color: #263238;
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.span {
+  color: #ff477e;
+}
+
+.filter-options {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #ff477e;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background-color: #aaa;
+}
+
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.gallery-item {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.5s forwards;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  padding: 30px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  width: 70%;
+  margin-bottom: 50px;
+} 
+
+.testimonial {
+  border-right: 4px solid #dd1954;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px 30px 150px; /* Adjusted for better alignment */
+  margin: 10px 15px 15px 15px;
+  position: relative;
+  background-color: #fff;
+  margin-right: 10px;
+  gap: 20px;
+  width: auto !important; /* Override the inline width style */
+}
+
+.testimonial:before,
+.testimonial:after {
+  content: "";
+  position: absolute;
+  border-top: 25px solid #ff0f7b;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+.testimonial:before {
+  width: 0%;
+  display: block;
+  bottom: -4px;
+  left: -17px;
+  transform: rotate(45deg);
+}
+
+.testimonial:after {
+  top: -4px;
+  left: -17px;
+  transform: rotate(135deg);
+}
+
+.testimonial .pic {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .pic img {
+  width: 100%;
+  height: auto;
+}
+
+.testimonial .description {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #6f6f6f;
+  line-height: 25px;
+  margin-bottom: 15px;
+  padding-right: 200px;
+}
+
+.testimonial .title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ff477e;
+  margin: 0;
+}
+
+.testimonial .post {
+  display: inline-block;
+  font-size: 17px;
+  color: #ff477e;
+  font-style: italic;
+}
+
+.slick-dots li button:before {
+  color: #2a3d7d;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff477e;
+}
+
+@media only screen and (max-width: 1024px) {
+  .testimonial {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .testimonial .pic {
+    display: block;
+    position: static;
+    margin: 0 auto 15px;
+  }
+
+  .testimonial .description {
+    margin-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .testimonial {
+    margin-left: 1px;
+    margin-right: 3px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .testimonial .pic {
+    display: block;
+    position: static;
+    margin: 0 auto 15px;
+  }
+
+  .testimonial .description {
+    margin-left: 0;
+    padding-right: 0;
+  }
+}

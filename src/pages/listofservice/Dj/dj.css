@@ -1,0 +1,130 @@
+.dj {
+    background-image: url(../../../assets/about.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dj-text {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(54, 54, 54, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dj-head {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 8px 0;
+    color: white;
+  }
+  
+  .dj-route {
+    background-color: #263238;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .span {
+    color: #ff477e;
+  }
+  
+  .dj-content {
+    margin-top: 20px;
+  }
+  
+  .dj-c-head {
+    margin-top: 35px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #ff477e;
+  }
+  
+  .dj-c-des {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    text-align: justify;
+  }
+  
+  .dj-card-image {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 80px;
+    margin-top: 40px;
+  }
+  
+  @media (max-width: 1024px) {
+    .dj-c-des,
+    .dj-card-image {
+      padding-left: 2%;
+      padding-right: 1%;
+    }
+    .dj-card-image {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dj-c-des,
+    .dj-card-image {
+      padding-left: 0%;
+      padding-right: 5%;
+    }
+    .dj-card-image {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 568px) {
+    .dj-c-des {
+      padding-left: 7%;
+      padding-right: 5%;
+      text-align: justify;
+    }
+    .dj-card-image {
+      padding-left: 7.5%;
+      padding-right: 5%;
+      justify-content: center;
+    }
+    .dj-c-head {
+      font-size: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .dj-card-image {
+      grid-template-columns: 1fr;
+    }
+    .dj-head {
+      font-size: 26px;
+    }
+    .dj-route {
+      font-size: 15px;
+    }
+  }
+  
